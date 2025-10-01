@@ -54,7 +54,6 @@ module unload FastQC/0.11.8
 
 ${STAR} --genomeDir /home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_bcell/rnaPreprocess/hg38_p14/STAR_hg38_p14_geneCodeGTF_filter \
 --readFilesIn ${datapath_kzfp_isoform}/${sample_name}.fastq \
-# --readFilesCommand zcat \
 --runThreadN 8 \
 --twopassMode Basic \
 --outFileNamePrefix ${outdir}/${sample_name} \
@@ -68,6 +67,8 @@ ${STAR} --genomeDir /home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_
 --chimOutJunctionFormat 1 \
 --chimMainSegmentMultNmax 1 \
 --outSAMattributes NH HI AS nM NM ch
+
+
 
 ${samtools} sort -@ 8 -O bam -o ${outdir}/${sample_name}_sorted.bam ${outdir}/${sample_name}_Aligned.out.bam
 ${samtools} index ${outdir}/${sample_name}_sorted.bam
