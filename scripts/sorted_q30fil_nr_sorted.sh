@@ -7,13 +7,17 @@ if [ -z "$1" ]; then
 fi
 
 samples="$1"
+indir=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/Star_files
 outdir=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/filtered_bams
 samtools=/home/abportillo/.conda/envs/mamba_abner_BC/bin/samtools
+
+# Create output directory if it doesn't exist
+mkdir -p "$outdir"
 
 while IFS= read -r sample_name; do
   echo "Processing $sample_name..."
 
-  input_bam="${outdir}/${sample_name}_nr_sorted.bam"
+  input_bam="${indir}/${sample_name}_nr_sorted.bam"
   filtered_bam="${outdir}/${sample_name}_sorted_q30fil_nr_sorted.bam"
 
   if [ ! -f "$input_bam" ]; then
