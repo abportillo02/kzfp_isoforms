@@ -19,12 +19,11 @@ while IFS= read -r sample_name; do
 
   job_script="${outdir}/${sample_name}_stringtie_job.sh"
   input_bam="${bamdir}/${sample_name}_sorted_q30fil_nr_sorted.bam"
-  output_gtf="${outdir}/${sample_name}_Gencode_transcripts_ballgown.gtf"
   sample_outdir="${outdir}/ballgown/${sample_name}"
 
   mkdir -p "$sample_outdir"
 
-  cat <<EOF>> "$job_script"
+  cat <<EOF > "$job_script"
 #!/bin/bash
 #SBATCH --job-name=StringTie_${sample_name}
 #SBATCH --output=${outdir}/${sample_name}_stringtie_%j.log
@@ -41,7 +40,7 @@ conda activate /home/abportillo/.conda/envs/mamba_abner_BC
 
 $stringtie "$input_bam" -e -B -p 8 \
   -G "$gtf" \
-  -o "$output_gtf" \
+  -o "${sample_outdir}/${sample_name}_ballgown.gtf" \
   -A "${sample_outdir}/counts.txt"
 EOF
 
