@@ -23,7 +23,7 @@ while IFS= read -r sample_name; do
 
   mkdir -p "$sample_outdir"
 
-  cat <<EOF > "$job_script"
+  cat <<EOF>> "$job_script"
 #!/bin/bash
 #SBATCH --job-name=StringTie_${sample_name}
 #SBATCH --output=${outdir}/${sample_name}_stringtie_%j.log
