@@ -9,7 +9,7 @@ fi
 samples="$1"
 bamdir=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/filtered_bams
 outdir=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/stringtie_ballgown
-gtf=/path/to/gencode_or_merged.gtf
+gtf=/net/nfs-irwrsrchnas01/labs/dschones/bioresearch/qianhui/hg38_2024/hg38_p14/teAnno_round3/filtered_gencode_v46_chr_patch_hapl_scaff_annotation.gtf
 stringtie=/home/abportillo/.conda/envs/mamba_abner_BC/bin/stringtie
 
 mkdir -p "$outdir"
