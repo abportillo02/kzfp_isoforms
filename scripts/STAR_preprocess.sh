@@ -56,7 +56,7 @@ ${STAR} --genomeDir /home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_
 --readFilesIn ${datapath_kzfp_isoform}/${sample_name}.fastq \
 --runThreadN 8 \
 --twopassMode Basic \
---outFileNamePrefix ${outdir}/${sample_name} \
+--outFileNamePrefix ${outdir}/${sample_name}_ \
 --outSAMtype BAM Unsorted \
 --quantMode TranscriptomeSAM GeneCounts \
 --outSAMstrandField intronMotif \
