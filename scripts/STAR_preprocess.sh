@@ -54,7 +54,7 @@ module unload FastQC/0.11.8
 
 ${STAR} --genomeDir /home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_bcell/rnaPreprocess/hg38_p14/STAR_hg38_p14_geneCodeGTF_filter \
 --readFilesIn ${datapath_kzfp_isoform}/${sample_name}.fastq \
---readFilesCommand zcat \
+# --readFilesCommand zcat \
 --runThreadN 8 \
 --twopassMode Basic \
 --outFileNamePrefix ${outdir}/${sample_name} \
