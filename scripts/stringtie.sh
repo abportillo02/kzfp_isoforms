@@ -42,7 +42,7 @@ conda activate /home/abportillo/.conda/envs/mamba_abner_BC
 $stringtie "$input_bam" -e -B -p 8 \
   -G "$gtf" \
   -o "$output_gtf" \
-  -A "${sample_outdir}/abundance.txt"
+  -A "${sample_outdir}/counts.txt"
 EOF
 
   sbatch "$job_script"
