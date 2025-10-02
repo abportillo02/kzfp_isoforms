@@ -18,7 +18,7 @@ while IFS= read -r sample_name; do
   echo "Creating job for $sample_name..."
 
   job_script="${outdir}/${sample_name}_stringtie_job.sh"
-  input_bam="${bamdir}/${sample_name}_nr_sorted.bam"
+  input_bam="${bamdir}/${sample_name}_sorted_nr_sorted.bam"
   sample_outdir="${outdir}/ballgown/${sample_name}"
 
   mkdir -p "$sample_outdir"
