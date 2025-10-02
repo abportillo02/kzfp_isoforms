@@ -17,7 +17,7 @@ mkdir -p "$outdir"
 while IFS= read -r sample_name; do
   echo "Creating job for $sample_name..."
 
-  job_script="${outdir}/${sample_name}_stringtie_job.sh"
+  job_script="${outdir}/${sample_name}_stringtie_job_denovo.sh"
   input_bam="${bamdir}/${sample_name}_sorted_nr_sorted.bam"
   sample_outdir="${outdir}/ballgown/${sample_name}"
 
@@ -38,7 +38,7 @@ while IFS= read -r sample_name; do
 source /home/abportillo/.bashrc
 conda activate /home/abportillo/.conda/envs/mamba_abner_BC
 
-$stringtie "$input_bam" -e -B -p 8 \
+$stringtie "$input_bam" -p 8 \
   # -G "$gtf" \
   -o "${sample_outdir}/${sample_name}_novel_ballgown.gtf" \
   -A "${sample_outdir}/counts.txt"
