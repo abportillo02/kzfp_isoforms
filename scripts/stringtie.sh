@@ -19,7 +19,7 @@ while IFS= read -r sample_name; do
 
   job_script="${outdir}/${sample_name}_stringtie_job.sh"
   input_bam="${bamdir}/${sample_name}_nr_sorted.bam"
-  sample_outdir="${outdir}/ballgown_denovo/${sample_name}"
+  sample_outdir="${outdir}/ballgown/${sample_name}"
 
   mkdir -p "$sample_outdir"
 
@@ -40,7 +40,7 @@ conda activate /home/abportillo/.conda/envs/mamba_abner_BC
 
 $stringtie "$input_bam" -e -B -p 8 \
   # -G "$gtf" \
-  -o "${sample_outdir}/${sample_name}__ballgown.gtf" \
+  -o "${sample_outdir}/${sample_name}_novel_ballgown.gtf" \
   -A "${sample_outdir}/counts.txt"
 EOF
 
