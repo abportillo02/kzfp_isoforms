@@ -19,7 +19,7 @@ while IFS= read -r sample_name; do
 
   job_script="${outdir}/${sample_name}_stringtie_job.sh"
   input_bam="${bamdir}/${sample_name}_nr_sorted.bam"
-  sample_outdir="${outdir}/ballgown2/${sample_name}"
+  sample_outdir="${outdir}/ballgown_denovo/${sample_name}"
 
   mkdir -p "$sample_outdir"
 
