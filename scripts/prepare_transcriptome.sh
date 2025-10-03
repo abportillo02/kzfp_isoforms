@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=merge_transcriptome
-#SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/merge_transcriptome_%j.log
+#SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/merge_novel_transcriptome_%j.log
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=abportillo@coh.org
 #SBATCH -n 8
@@ -40,7 +40,7 @@ fi
 echo "Merging GTFs using StringTie..."
 "$STRINGTIE" --merge -G "$REFERENCE_GTF" -o "$MERGED_GTF" "$MERGELIST"
 
-Step 2: Generate transcript FASTA
+#Step 2: Generate transcript FASTA
 echo "Generating transcript FASTA using gffread..."
 "$GFFREAD" "$MERGED_GTF" -g "$REFERENCE_FASTA" -w "$TRANSCRIPT_FASTA"
 
