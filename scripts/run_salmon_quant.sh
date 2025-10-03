@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=salmon_quant
+#SBATCH --job-name=salmon_quant_novel
 #SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/salmon_quant_novel_%j.log
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=abportillo@coh.org
