@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=salmon_quant
-#SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/salmon_quant_%j.log
+#SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/salmon_quant_novel_%j.log
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=abportillo@coh.org
 #SBATCH -n 8
@@ -12,10 +12,10 @@
 set -e
 
 # Define paths
-TRANSCRIPT_FASTA="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/isoform_nt.fa"
-INDEX_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_index"
+TRANSCRIPT_FASTA="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/novel_isoform_nt.fa"
+INDEX_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_index_novel"
 READ_DIR="/home/abportillo/github_repo/kzfp_isoforms/fastq_files"
-OUTPUT_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_quant"
+OUTPUT_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_quant_novel"
 
 # Load Salmon if needed (or use full path)
 SALMON=/home/abportillo/.conda/envs/mamba_abner_BC/bin/salmon
