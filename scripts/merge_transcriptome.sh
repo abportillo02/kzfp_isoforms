@@ -12,7 +12,7 @@
 set -e
 
 # Define input files
-MERGELIST="/home/abportillo/github_repo/kzfp_isoforms/scripts/mergelist.txt"
+MERGELIST="/home/abportillo/github_repo/kzfp_isoforms/scripts/mergelist_novel.txt"
 REFERENCE_GTF="/net/nfs-irwrsrchnas01/labs/dschones/bioresearch/qianhui/hg38_2024/hg38_p14/teAnno_round3/filtered_gencode_v46_chr_patch_hapl_scaff_annotation.gtf"
 REFERENCE_FASTA="/home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_bcell/rnaPreprocess/hg38_p14/hg38_p14.fa"
 
