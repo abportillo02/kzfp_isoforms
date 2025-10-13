@@ -42,7 +42,7 @@ while IFS= read -r sample_name; do
 #SBATCH -p all
 #SBATCH --mem=150G
 #SBATCH --time=48:00:00
-#SBATCH --output=${outdir}/${sample_name}_RNA_hg38_p14_2passStar_%j.log
+#SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/14897_124-LEP-RNA_CGTACG_L999_R1_001_RNA_hg38_p14_2passStar_%j.log
 
 source /home/abportillo/.bashrc
 conda activate /home/abportillo/.conda/envs/mamba_abner_BC
