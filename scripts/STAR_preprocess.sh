@@ -20,7 +20,7 @@ while IFS= read -r sample_name; do
 
   datapath_kzfp_isoform=/home/abportillo/github_repo/kzfp_isoforms/fastq_files
   mkdir -p /home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess
-  mkdir -p /home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/Star_file_2
+  mkdir -p /home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/Star_files_2
   outdir=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/Star_files_2
   script_path=${outdir}/${sample_name}_star_job.sh
 
