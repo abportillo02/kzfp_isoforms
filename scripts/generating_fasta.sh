@@ -18,7 +18,7 @@ REFERENCE_FASTA="/home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_bce
 
 # Define output directory
 OUTDIR="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess"
-MERGED_GTF="net/nfs-irwrsrchnas01/labs/dschones/bioresearch/qianhui/projects/te_function/rna_seq_output/young_old_LEP_R1_gemini/stringtie_merge/old_vs_young.annotated.gtf"
+MERGED_GTF="/net/nfs-irwrsrchnas01/labs/dschones/bioresearch/qianhui/projects/te_function/rna_seq_output/young_old_LEP_R1_gemini/stringtie_merge/old_vs_young.annotated.gtf"
 TRANSCRIPT_FASTA="${OUTDIR}/qianhui_output.fa"
 
 # Define tools
