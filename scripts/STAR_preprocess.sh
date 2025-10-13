@@ -55,7 +55,12 @@ module unload FastQC/0.11.8
 ${STAR} --genomeDir /home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_bcell/rnaPreprocess/hg38_p14/STAR_hg38_p14_geneCodeGTF_filter \
 --readFilesIn ${datapath_kzfp_isoform}/${sample_name}.fastq \
 --runThreadN 8 \
---twopassMode Basic \
+--twopassMode None \
+--outFilterMultimapNmax 10 \
+--alignSJoverhangMin 8 \
+--alignSJDBoverhangMin 3 \
+--outSJfilterReads Unique \
+--outSJfilterOverhangMin 10 10 10 10 \
 --outFileNamePrefix ${outdir}/${sample_name}_ \
 --outSAMtype BAM Unsorted \
 --quantMode TranscriptomeSAM GeneCounts \
