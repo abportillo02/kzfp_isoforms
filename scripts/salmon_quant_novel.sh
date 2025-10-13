@@ -12,10 +12,10 @@
 set -e
 
 # Define paths
-TRANSCRIPT_FASTA="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/novel_isoform_nt2.fa"
-INDEX_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_index_novel2"
+TRANSCRIPT_FASTA="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/novel_isoform_nt3.fa"
+INDEX_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_index_novel3"
 READ_DIR="/home/abportillo/github_repo/kzfp_isoforms/fastq_files"
-OUTPUT_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_quant_novel2"
+OUTPUT_DIR="/home/abportillo/github_repo/kzfp_isoforms/salmon_quant_novel3"
 
 # Load Salmon if needed (or use full path)
 SALMON=/home/abportillo/.conda/envs/mamba_abner_BC/bin/salmon
