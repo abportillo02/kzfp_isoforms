@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=generate_fasta
-#SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/generate_fasta_%j.log
+#SBATCH --job-name=generate_old_fasta
+#SBATCH --output=/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/generate_old_fasta_%j.log
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=abportillo@coh.org
 #SBATCH -n 8
@@ -18,8 +18,8 @@ REFERENCE_FASTA="/home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_bce
 
 # Define output directory
 OUTDIR="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess"
-MERGED_GTF="/net/nfs-irwrsrchnas01/labs/dschones/bioresearch/qianhui/projects/te_function/rna_seq_output/young_old_LEP_R1_gemini/stringtie_merge/old_vs_young.annotated.gtf"
-TRANSCRIPT_FASTA="${OUTDIR}/qianhui_output.fa"
+MERGED_GTF="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/old_merged.gtf"
+TRANSCRIPT_FASTA="${OUTDIR}/merged_old.fa"
 
 # Define tools
 STRINGTIE=/home/abportillo/.conda/envs/mamba_abner_BC/bin/stringtie
