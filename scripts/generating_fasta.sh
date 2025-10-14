@@ -18,8 +18,8 @@ REFERENCE_FASTA="/home/abportillo/github_repo/RNA_seq_Bcell/output/raw_fastq_bce
 
 # Define output directory
 OUTDIR="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess"
-MERGED_GTF="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/old_merged.gtf"
-TRANSCRIPT_FASTA="${OUTDIR}/merged_old.fa"
+MERGED_GTF="/home/abportillo/github_repo/kzfp_isoforms/fastq_files/rnaPreprocess/young_merged.gtf"
+TRANSCRIPT_FASTA="${OUTDIR}/merged_young.fa"
 
 # Define tools
 STRINGTIE=/home/abportillo/.conda/envs/mamba_abner_BC/bin/stringtie
